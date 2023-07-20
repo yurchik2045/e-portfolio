@@ -1,0 +1,17 @@
+{% extends 'base.html' %}
+
+{% block title %}About{% endblock %}
+
+{% block content %}
+<div class="container">
+  <div class="row">
+    <div class="col-md-6">
+      <h1>Обо мне</h1>
+      <p>2018-2022гг. обучался на гранте в Университете Международного Бизнеса по специальности «Вычислительная Техника и Программное Обеспечение». В процессе обучения приобрел следующие навыки: - Python: изучил ООП, занимался написанием алгоритмов шифрования, машинным обучением и backend-разработкой. Знаком с фреймворками для глубокого обучения Tensor Flow и PyTorch, фреймворком Flask для создания серверной части на языке Python и библиотеками Scikit learn, Numpy, Matplotlib, Pandas для Data Science и Machine Learning. Для дипломной работы бакалавра разрабатывал мобильное приложение для распознавания лиц с использованием машинного обучения. Прошел онлайн курс «Математика и Python для анализа данных» на Coursera от университета Moscow Institute of Physics and Technology, Yandex и E-Learning Development Fund https://coursera.org/share/9e2e1e5de33afa6861f154cf2a05c235 - MySQL: выборка данных, группировка записей, функции, хранимые процедуры и триггеры. - Java: основы языка, разработка под Android - C++: основы языка Мой github: https://github.com/yurchik2045 Мои интересы и увлечения: езда на велосипеде, походы в горы, изучение казахского и английского языков, чтение книг, просмотр фильмов и сериалов.</p>
+    </div>
+    <div class="col-md-6">
+      <img src="{{ url_for('static', filename='images/my_photo.jpg') }}" class="img-fluid rounded-circle mb-3" alt="My Photo">
+    </div>
+  </div>
+</div>
+{% endblock %}

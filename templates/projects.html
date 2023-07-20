@@ -1,0 +1,85 @@
+{% extends 'base.html' %}
+
+{% block title %}Projects{% endblock %}
+
+{% block extra_head %}
+    <style>
+        .project-card {
+            margin-bottom: 20px;
+        }
+    </style>
+{% endblock %}
+
+{% block content %}
+    <div class="jumbotron">
+        <h1 class="display-4">Мои проекты</h1>
+        <hr class="my-4">
+        <p class="lead">Вот некоторые из проектов, над которыми я работал</p>
+    </div>
+
+    <div class="card-deck">
+        <div class="card project-card">
+            <img class="card-img-top" src="https://sun9-east.userapi.com/sun9-25/s/v1/ig2/Rpt8L7h9DxrXSNuSiVob4cHIRmXvLhy3u9yKSFfxHWBB44r1U7L4lSL3Hu1GjG1L4V2papehIF-aL-QVgmfeFS1y.jpg?size=1695x1173&quality=96&type=album" alt="Project 1">
+            <div class="card-body">
+                <h5 class="card-title">Прогнозирование наличия или отсутствия болезни сердца</h5>
+                <p class="card-text">В данной работе был проведен анализ датасета «heart.csv». Данные содержат:
+                    age - возраст в годах
+                    sex - (1 = мужчина; 0 = женщина)
+                    cp - тип боли в груди
+                    trestbps - артериальное давление в покое (в мм рт. ст. при поступлении в больницу)
+                    chol - уровень холестерина в сыворотке крови в мг/дл
+                    fbs - (сахар в крови натощак > 120 мг/дл) (1 = истинно; 0 = ложно)
+                    restecg - результаты электрокардиографии в состоянии покоя
+                    thalach - максимальная достигнутая частота сердечных сокращений
+                    exang - стенокардия, вызванная физической нагрузкой (1 = да; 0 = нет)
+                    oldpeak - депрессия ST, вызванная физической нагрузкой по сравнению с покоем
+                    slope - наклон сегмента ST пика физической нагрузки
+                    ca - количество крупных сосудов (0-3), окрашенных при флоуроскопии
+                    thal - 3 = норма; 6 = фиксированный дефект; 7 = обратимый дефект
+                    target - наличие или отсутствие заболевания (1=да, 0=нет)
+                    
+                    После анализа данных были построены 3 модели машинного обучения для предсказания наличия или отсутствия у человека болезни сердца. Были использованы три алгоритма машинного обучения: логистическая регрессия, k-ближайших соседей и наивный байесовский классификатор. Модель в которой использовался алгоритм k-ближайших соседей показал наивысшую долю правильных ответов.</p>
+            </div>
+            <div class="card-footer">
+                <a href="https://github.com/yurchik2045/Yura_task" class="btn btn-primary" target="_blank">GitHub</a>
+            </div>
+        </div>
+        <div class="card project-card">
+            <img class="card-img-top" src="https://sun9-west.userapi.com/sun9-15/s/v1/ig2/BV9aEZZbGK_isNxZbvweTWuYt1UtptvLgBfBuUoXFkgJWGq_tDUNS-Suu7boU4iIW4kvfjIJFC7UeNJAZq8Sdw5E.jpg?size=1200x628&quality=96&type=album" alt="Project 2">
+            <div class="card-body">
+                <h5 class="card-title">Приложение для прогнозирования диабета</h5>
+                <p class="card-text">Цель работы – создать веб-приложение, с помощью которого пользователи могут узнать, есть ли у них диабет, введя следующие данные:
+                    • Количество беременностей
+                    • Глюкоза (мг/дл)
+                    • Артериальное давление (мм рт. ст.)
+                    • Толщина кожи (мм)
+                    • Уровень инсулина (МЕ/мл)
+                    • Индекс массы тела (кг/м²)
+                    • Diabetes Pedigree Function
+                    • Возраст
+                    
+                    Выполненные задачи
+                    • Построение ML-модели с помощью библиотеки scikit-learn
+                    • Обучение модели на тренировочных данных
+                    • Оценка работы модели на тестовых данных
+                    • Сохранение модели в файл
+                    • Создание веб-приложения с помощью фреймворка Flask
+                    • Развертывание приложения на Heroku</p>
+            </div>
+            <div class="card-footer">
+                <a href="https://github.com/yurchik2045/diabetes-prediction-uib" class="btn btn-primary" target="_blank">GitHub</a>
+            </div>
+        </div>
+        <div class="card project-card">
+            <img class="card-img-top" src="https://sun9-west.userapi.com/sun9-70/s/v1/ig2/Irgmo8G7sJJCm8RPmFiSgilNWTsIhkaLICgJ03HkwWrcPgsEIih-Vl86g7vVgqyOv9JGDskahKOHu8mzJF0IBSDD.jpg?size=1920x1080&quality=96&type=album" alt="Project 3">
+            <div class="card-body">
+                <h5 class="card-title">Программа для игры в кости</h5>
+                <p class="card-text">Программа для игры в кости между пользователем и компьютером. Во время игры пользователь и компьютер бросают кости, после чего программа определяет победителя и выводит соответствующее сообщение. Когда игра заканчивается, программа выводит статистику, включая количество побед пользователя, компьютера и ничьих, а также количество сыгранных партий</p>
+            </div>
+            <div class="card-footer">
+                <a href="https://github.com/yurchik2045/dice-game-python" class="btn btn-primary" target="_blank">GitHub</a>
+            </div>
+        </div>
+    </div>
+{% endblock %}
+
